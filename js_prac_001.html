@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Change Color</title>
+    <style>
+        body{
+            font-size:1.3em;
+            text-align: center;
+        }
+    </style>
+</head>
+
+<body id = "cc">
+    <script>
+        var name = prompt("이름을 입력하세요");
+        document.write("<b><big>" + name + "</big></b>님, 환영합니다.","<br>");
+
+        var now = new Date();
+        var display = now.toLocaleTimeString();
+        document.write("현재 시간은 " + display + "입니다.", "<br><br>");
+
+        var cc = document.querySelector('#cc');
+        cc.onclick = function(){
+            cc.style.backgroundColor = "black";
+            cc.style.color = "white";  //글자 클릭시 배경화면 색 바뀜
+        }
+
+        document.write("클릭");
+    </script>
+</body>
+</html>
